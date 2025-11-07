@@ -101,7 +101,6 @@ class LanguageModelComponent(LCModelComponent):
             display_name="Model Name",
             value="gpt-4o",
             info="Enter the model name manually (e.g., 'gpt-4o', 'claude-3-5-sonnet-20241022', 'gemini-2.0-flash-exp')",
-            real_time_refresh=True,
             required=True,
         ),
         SecretStrInput(

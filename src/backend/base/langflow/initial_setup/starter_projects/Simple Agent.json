@@ -6,8 +6,64 @@
         "className": "",
         "data": {
           "sourceHandle": {
+            "dataType": "CalculatorComponent",
+            "id": "CalculatorComponent-hkc9k",
+            "name": "component_as_tool",
+            "output_types": [
+              "Tool"
+            ]
+          },
+          "targetHandle": {
+            "fieldName": "tools",
+            "id": "Agent-0hbdV",
+            "inputTypes": [
+              "Tool"
+            ],
+            "type": "other"
+          }
+        },
+        "id": "reactflow__edge-CalculatorComponent-hkc9k{œdataTypeœ:œCalculatorComponentœ,œidœ:œCalculatorComponent-hkc9kœ,œnameœ:œcomponent_as_toolœ,œoutput_typesœ:[œToolœ]}-Agent-0hbdV{œfieldNameœ:œtoolsœ,œidœ:œAgent-0hbdVœ,œinputTypesœ:[œToolœ],œtypeœ:œotherœ}",
+        "selected": false,
+        "source": "CalculatorComponent-hkc9k",
+        "sourceHandle": "{œdataTypeœ:œCalculatorComponentœ,œidœ:œCalculatorComponent-hkc9kœ,œnameœ:œcomponent_as_toolœ,œoutput_typesœ:[œToolœ]}",
+        "target": "Agent-0hbdV",
+        "targetHandle": "{œfieldNameœ:œtoolsœ,œidœ:œAgent-0hbdVœ,œinputTypesœ:[œToolœ],œtypeœ:œotherœ}"
+      },
+      {
+        "animated": false,
+        "className": "",
+        "data": {
+          "sourceHandle": {
+            "dataType": "URLComponent",
+            "id": "URLComponent-5phii",
+            "name": "component_as_tool",
+            "output_types": [
+              "Tool"
+            ]
+          },
+          "targetHandle": {
+            "fieldName": "tools",
+            "id": "Agent-0hbdV",
+            "inputTypes": [
+              "Tool"
+            ],
+            "type": "other"
+          }
+        },
+        "id": "reactflow__edge-URLComponent-5phii{œdataTypeœ:œURLComponentœ,œidœ:œURLComponent-5phiiœ,œnameœ:œcomponent_as_toolœ,œoutput_typesœ:[œToolœ]}-Agent-0hbdV{œfieldNameœ:œtoolsœ,œidœ:œAgent-0hbdVœ,œinputTypesœ:[œToolœ],œtypeœ:œotherœ}",
+        "selected": false,
+        "source": "URLComponent-5phii",
+        "sourceHandle": "{œdataTypeœ:œURLComponentœ,œidœ:œURLComponent-5phiiœ,œnameœ:œcomponent_as_toolœ,œoutput_typesœ:[œToolœ]}",
+        "target": "Agent-0hbdV",
+        "targetHandle": "{œfieldNameœ:œtoolsœ,œidœ:œAgent-0hbdVœ,œinputTypesœ:[œToolœ],œtypeœ:œotherœ}"
+      },
+      {
+        "animated": false,
+        "className": "",
+        "data": {
+          "sourceHandle": {
             "dataType": "Agent",
-            "id": "Agent-D0Kx2",
+            "id": "Agent-0hbdV",
             "name": "response",
             "output_types": [
               "Message"
@@ -15,7 +71,7 @@
           },
           "targetHandle": {
             "fieldName": "input_value",
-            "id": "ChatOutput-yhCn0",
+            "id": "ChatOutput-7cHUF",
             "inputTypes": [
               "Data",
               "DataFrame",
@@ -24,40 +80,12 @@
             "type": "other"
           }
         },
-        "id": "reactflow__edge-Agent-D0Kx2{œdataTypeœ:œAgentœ,œidœ:œAgent-D0Kx2œ,œnameœ:œresponseœ,œoutput_typesœ:[œMessageœ]}-ChatOutput-yhCn0{œfieldNameœ:œinput_valueœ,œidœ:œChatOutput-yhCn0œ,œinputTypesœ:[œDataœ,œDataFrameœ,œMessageœ],œtypeœ:œotherœ}",
+        "id": "xy-edge__Agent-0hbdV{œdataTypeœ:œAgentœ,œidœ:œAgent-0hbdVœ,œnameœ:œresponseœ,œoutput_typesœ:[œMessageœ]}-ChatOutput-7cHUF{œfieldNameœ:œinput_valueœ,œidœ:œChatOutput-7cHUFœ,œinputTypesœ:[œDataœ,œDataFrameœ,œMessageœ],œtypeœ:œotherœ}",
         "selected": false,
-        "source": "Agent-D0Kx2",
-        "sourceHandle": "{œdataTypeœ: œAgentœ, œidœ: œAgent-D0Kx2œ, œnameœ: œresponseœ, œoutput_typesœ: [œMessageœ]}",
-        "target": "ChatOutput-yhCn0",
-        "targetHandle": "{œfieldNameœ: œinput_valueœ, œidœ: œChatOutput-yhCn0œ, œinputTypesœ: [œDataœ, œDataFrameœ, œMessageœ], œtypeœ: œotherœ}"
-      },
-      {
-        "animated": false,
-        "className": "",
-        "data": {
-          "sourceHandle": {
-            "dataType": "CalculatorComponent",
-            "id": "CalculatorComponent-hMbFw",
-            "name": "component_as_tool",
-            "output_types": [
-              "Tool"
-            ]
-          },
-          "targetHandle": {
-            "fieldName": "tools",
-            "id": "Agent-D0Kx2",
-            "inputTypes": [
-              "Tool"
-            ],
-            "type": "other"
-          }
-        },
-        "id": "reactflow__edge-CalculatorComponent-hMbFw{œdataTypeœ:œCalculatorComponentœ,œidœ:œCalculatorComponent-hMbFwœ,œnameœ:œcomponent_as_toolœ,œoutput_typesœ:[œToolœ]}-Agent-D0Kx2{œfieldNameœ:œtoolsœ,œidœ:œAgent-D0Kx2œ,œinputTypesœ:[œToolœ],œtypeœ:œotherœ}",
-        "selected": false,
-        "source": "CalculatorComponent-hMbFw",
-        "sourceHandle": "{œdataTypeœ: œCalculatorComponentœ, œidœ: œCalculatorComponent-hMbFwœ, œnameœ: œcomponent_as_toolœ, œoutput_typesœ: [œToolœ]}",
-        "target": "Agent-D0Kx2",
-        "targetHandle": "{œfieldNameœ: œtoolsœ, œidœ: œAgent-D0Kx2œ, œinputTypesœ: [œToolœ], œtypeœ: œotherœ}"
+        "source": "Agent-0hbdV",
+        "sourceHandle": "{œdataTypeœ:œAgentœ,œidœ:œAgent-0hbdVœ,œnameœ:œresponseœ,œoutput_typesœ:[œMessageœ]}",
+        "target": "ChatOutput-7cHUF",
+        "targetHandle": "{œfieldNameœ:œinput_valueœ,œidœ:œChatOutput-7cHUFœ,œinputTypesœ:[œDataœ,œDataFrameœ,œMessageœ],œtypeœ:œotherœ}"
       },
       {
         "animated": false,
@@ -65,7 +93,7 @@
         "data": {
           "sourceHandle": {
             "dataType": "ChatInput",
-            "id": "ChatInput-iPUSx",
+            "id": "ChatInput-cy7PH",
             "name": "message",
             "output_types": [
               "Message"
@@ -73,103 +101,53 @@
           },
           "targetHandle": {
             "fieldName": "input_value",
-            "id": "Agent-D0Kx2",
+            "id": "Agent-0hbdV",
             "inputTypes": [
               "Message"
             ],
             "type": "str"
           }
         },
-        "id": "reactflow__edge-ChatInput-iPUSx{œdataTypeœ:œChatInputœ,œidœ:œChatInput-iPUSxœ,œnameœ:œmessageœ,œoutput_typesœ:[œMessageœ]}-Agent-D0Kx2{œfieldNameœ:œinput_valueœ,œidœ:œAgent-D0Kx2œ,œinputTypesœ:[œMessageœ],œtypeœ:œstrœ}",
+        "id": "xy-edge__ChatInput-cy7PH{œdataTypeœ:œChatInputœ,œidœ:œChatInput-cy7PHœ,œnameœ:œmessageœ,œoutput_typesœ:[œMessageœ]}-Agent-0hbdV{œfieldNameœ:œinput_valueœ,œidœ:œAgent-0hbdVœ,œinputTypesœ:[œMessageœ],œtypeœ:œstrœ}",
         "selected": false,
-        "source": "ChatInput-iPUSx",
-        "sourceHandle": "{œdataTypeœ: œChatInputœ, œidœ: œChatInput-iPUSxœ, œnameœ: œmessageœ, œoutput_typesœ: [œMessageœ]}",
-        "target": "Agent-D0Kx2",
-        "targetHandle": "{œfieldNameœ: œinput_valueœ, œidœ: œAgent-D0Kx2œ, œinputTypesœ: [œMessageœ], œtypeœ: œstrœ}"
+        "source": "ChatInput-cy7PH",
+        "sourceHandle": "{œdataTypeœ:œChatInputœ,œidœ:œChatInput-cy7PHœ,œnameœ:œmessageœ,œoutput_typesœ:[œMessageœ]}",
+        "target": "Agent-0hbdV",
+        "targetHandle": "{œfieldNameœ:œinput_valueœ,œidœ:œAgent-0hbdVœ,œinputTypesœ:[œMessageœ],œtypeœ:œstrœ}"
       },
       {
         "animated": false,
+        "className": "",
         "data": {
           "sourceHandle": {
-            "dataType": "URLComponent",
-            "id": "URLComponent-TpTHB",
-            "name": "component_as_tool",
+            "dataType": "LanguageModelComponent",
+            "id": "LanguageModelComponent-3ChBu",
+            "name": "model_output",
             "output_types": [
-              "Tool"
+              "LanguageModel"
             ]
           },
           "targetHandle": {
-            "fieldName": "tools",
-            "id": "Agent-D0Kx2",
+            "fieldName": "agent_llm",
+            "id": "Agent-0hbdV",
             "inputTypes": [
-              "Tool"
+              "LanguageModel"
             ],
-            "type": "other"
+            "type": "str"
           }
         },
-        "id": "xy-edge__URLComponent-TpTHB{œdataTypeœ:œURLComponentœ,œidœ:œURLComponent-TpTHBœ,œnameœ:œcomponent_as_toolœ,œoutput_typesœ:[œToolœ]}-Agent-D0Kx2{œfieldNameœ:œtoolsœ,œidœ:œAgent-D0Kx2œ,œinputTypesœ:[œToolœ],œtypeœ:œotherœ}",
+        "id": "xy-edge__LanguageModelComponent-3ChBu{œdataTypeœ:œLanguageModelComponentœ,œidœ:œLanguageModelComponent-3ChBuœ,œnameœ:œmodel_outputœ,œoutput_typesœ:[œLanguageModelœ]}-Agent-0hbdV{œfieldNameœ:œagent_llmœ,œidœ:œAgent-0hbdVœ,œinputTypesœ:[œLanguageModelœ],œtypeœ:œstrœ}",
         "selected": false,
-        "source": "URLComponent-TpTHB",
-        "sourceHandle": "{œdataTypeœ: œURLComponentœ, œidœ: œURLComponent-TpTHBœ, œnameœ: œcomponent_as_toolœ, œoutput_typesœ: [œToolœ]}",
-        "target": "Agent-D0Kx2",
-        "targetHandle": "{œfieldNameœ: œtoolsœ, œidœ: œAgent-D0Kx2œ, œinputTypesœ: [œToolœ], œtypeœ: œotherœ}"
+        "source": "LanguageModelComponent-3ChBu",
+        "sourceHandle": "{œdataTypeœ:œLanguageModelComponentœ,œidœ:œLanguageModelComponent-3ChBuœ,œnameœ:œmodel_outputœ,œoutput_typesœ:[œLanguageModelœ]}",
+        "target": "Agent-0hbdV",
+        "targetHandle": "{œfieldNameœ:œagent_llmœ,œidœ:œAgent-0hbdVœ,œinputTypesœ:[œLanguageModelœ],œtypeœ:œstrœ}"
       }
     ],
     "nodes": [
       {
         "data": {
-          "id": "note-28UlV",
-          "node": {
-            "description": "# 📖 README\nRun an Agent with URL and Calculator tools available for its use. \nThe Agent decides which tool to use to solve a problem.\n## Quick start\n\n1. Add your OpenAI API key to the Agent.\n2. Open the Playground and chat with the Agent. Request some information about a recipe, and then ask to add two numbers together. In the responses, the Agent will use different tools to solve different problems.\n\n## Next steps\nConnect more tools to the Agent to create your perfect assistant.\n\nFor more, see the [Langflow docs](https://docs.langflow.org/agents-tool-calling-agent-component).",
-            "display_name": "",
-            "documentation": "",
-            "template": {
-              "backgroundColor": "neutral"
-            }
-          },
-          "type": "note"
-        },
-        "dragging": false,
-        "id": "note-28UlV",
-        "measured": {
-          "height": 630,
-          "width": 575
-        },
-        "position": {
-          "x": 637.5791433882063,
-          "y": 32.76769637325184
-        },
-        "selected": false,
-        "type": "noteNode"
-      },
-      {
-        "data": {
-          "id": "note-2JuVK",
-          "node": {
-            "description": "### 💡 Add your OpenAI API key here👇",
-            "display_name": "",
-            "documentation": "",
-            "template": {
-              "backgroundColor": "transparent"
-            }
-          },
-          "type": "note"
-        },
-        "id": "note-2JuVK",
-        "measured": {
-          "height": 324,
-          "width": 324
-        },
-        "position": {
-          "x": 1648.6876745095624,
-          "y": 253.8646618156497
-        },
-        "selected": false,
-        "type": "noteNode"
-      },
-      {
-        "data": {
-          "id": "CalculatorComponent-hMbFw",
+          "id": "CalculatorComponent-hkc9k",
           "node": {
             "base_classes": [
               "Data"
@@ -188,8 +166,9 @@
             "frozen": false,
             "icon": "calculator",
             "key": "CalculatorComponent",
+            "last_updated": "2025-11-07T19:33:15.643Z",
             "legacy": false,
-            "lf_version": "1.2.0",
+            "lf_version": "1.7.0",
             "metadata": {
               "code_hash": "5fcfa26be77d",
               "dependencies": {
@@ -315,9 +294,9 @@
           "type": "CalculatorComponent"
         },
         "dragging": false,
-        "id": "CalculatorComponent-hMbFw",
+        "id": "CalculatorComponent-hkc9k",
         "measured": {
-          "height": 218,
+          "height": 217,
           "width": 320
         },
         "position": {
@@ -329,7 +308,7 @@
       },
       {
         "data": {
-          "id": "ChatInput-iPUSx",
+          "id": "ChatInput-cy7PH",
           "node": {
             "base_classes": [
               "Message"
@@ -357,6 +336,7 @@
             "icon": "MessagesSquare",
             "key": "ChatInput",
             "legacy": false,
+            "lf_version": "1.7.0",
             "metadata": {
               "code_hash": "0014a5b41817",
               "dependencies": {
@@ -595,7 +575,7 @@
           "type": "ChatInput"
         },
         "dragging": false,
-        "id": "ChatInput-iPUSx",
+        "id": "ChatInput-cy7PH",
         "measured": {
           "height": 48,
           "width": 192
@@ -609,7 +589,7 @@
       },
       {
         "data": {
-          "id": "ChatOutput-yhCn0",
+          "id": "ChatOutput-7cHUF",
           "node": {
             "base_classes": [
               "Message"
@@ -638,6 +618,7 @@
             "icon": "MessagesSquare",
             "key": "ChatOutput",
             "legacy": false,
+            "lf_version": "1.7.0",
             "metadata": {
               "code_hash": "4848ad3e35d5",
               "dependencies": {
@@ -878,7 +859,7 @@
           "showNode": false,
           "type": "ChatOutput"
         },
-        "id": "ChatOutput-yhCn0",
+        "id": "ChatOutput-7cHUF",
         "measured": {
           "height": 48,
           "width": 192
@@ -892,7 +873,7 @@
       },
       {
         "data": {
-          "id": "Agent-D0Kx2",
+          "id": "Agent-0hbdV",
           "node": {
             "base_classes": [
               "Message"
@@ -928,7 +909,9 @@
             ],
             "frozen": false,
             "icon": "bot",
+            "last_updated": "2025-11-07T19:33:15.691Z",
             "legacy": false,
+            "lf_version": "1.7.0",
             "metadata": {
               "code_hash": "adf733969280",
               "dependencies": {
@@ -958,8 +941,11 @@
                 "cache": true,
                 "display_name": "Response",
                 "group_outputs": false,
+                "hidden": null,
                 "method": "message_response",
                 "name": "response",
+                "options": null,
+                "required_inputs": null,
                 "selected": "Message",
                 "tool_mode": true,
                 "types": [
@@ -977,6 +963,7 @@
                 "display_name": "Current Date",
                 "dynamic": false,
                 "info": "If true, will add a tool to the agent that returns the current date.",
+                "input_types": [],
                 "list": false,
                 "list_add_label": "Add More",
                 "name": "add_current_date_tool",
@@ -1019,7 +1006,7 @@
                 "advanced": false,
                 "combobox": false,
                 "dialog_inputs": {},
-                "display_name": "Model Provider",
+                "display_name": "Language Model",
                 "dynamic": false,
                 "external_options": {
                   "fields": {
@@ -1033,7 +1020,9 @@
                   }
                 },
                 "info": "The provider of the language model that the agent will use to generate responses.",
-                "input_types": [],
+                "input_types": [
+                  "LanguageModel"
+                ],
                 "name": "agent_llm",
                 "options": [
                   "Anthropic",
@@ -1051,51 +1040,21 @@
                   },
                   {
                     "icon": "OpenAI"
+                  },
+                  {
+                    "icon": "WatsonxAI"
+                  },
+                  {
+                    "icon": "Ollama"
                   }
                 ],
-                "placeholder": "",
+                "placeholder": "Awaiting model input.",
                 "real_time_refresh": true,
+                "refresh_button": false,
                 "required": false,
                 "show": true,
                 "title_case": false,
                 "toggle": false,
-                "tool_mode": false,
-                "trace_as_metadata": true,
-                "type": "str",
-                "value": "OpenAI"
-              },
-              "api_key": {
-                "_input_type": "SecretStrInput",
-                "advanced": false,
-                "display_name": "OpenAI API Key",
-                "dynamic": false,
-                "info": "The OpenAI API Key to use for the OpenAI model.",
-                "input_types": [],
-                "load_from_db": true,
-                "name": "api_key",
-                "password": true,
-                "placeholder": "",
-                "real_time_refresh": true,
-                "required": false,
-                "show": true,
-                "title_case": false,
-                "type": "str",
-                "value": "OPENAI_API_KEY"
-              },
-              "base_url": {
-                "_input_type": "StrInput",
-                "advanced": false,
-                "display_name": "Base URL",
-                "dynamic": false,
-                "info": "The base URL of the API.",
-                "list": false,
-                "list_add_label": "Add More",
-                "load_from_db": false,
-                "name": "base_url",
-                "placeholder": "",
-                "required": true,
-                "show": false,
-                "title_case": false,
                 "tool_mode": false,
                 "trace_as_metadata": true,
                 "type": "str",
@@ -1107,6 +1066,7 @@
                 "fileTypes": [],
                 "file_path": "",
                 "info": "",
+                "input_types": [],
                 "list": false,
                 "load_from_db": false,
                 "multiline": true,
@@ -1173,6 +1133,7 @@
                 "display_name": "Handle Parse Errors",
                 "dynamic": false,
                 "info": "Should the Agent fix errors when reading user input for better processing?",
+                "input_types": [],
                 "list": false,
                 "list_add_label": "Add More",
                 "name": "handle_parsing_errors",
@@ -1214,6 +1175,7 @@
                 "display_name": "Max Iterations",
                 "dynamic": false,
                 "info": "The maximum number of attempts the agent can make to complete its task before it stops.",
+                "input_types": [],
                 "list": false,
                 "list_add_label": "Add More",
                 "name": "max_iterations",
@@ -1226,133 +1188,13 @@
                 "type": "int",
                 "value": 15
               },
-              "max_output_tokens": {
-                "_input_type": "IntInput",
-                "advanced": false,
-                "display_name": "Max Output Tokens",
-                "dynamic": false,
-                "info": "The maximum number of tokens to generate.",
-                "list": false,
-                "list_add_label": "Add More",
-                "name": "max_output_tokens",
-                "placeholder": "",
-                "required": false,
-                "show": false,
-                "title_case": false,
-                "tool_mode": false,
-                "trace_as_metadata": true,
-                "type": "int",
-                "value": ""
-              },
-              "max_retries": {
-                "_input_type": "IntInput",
-                "advanced": true,
-                "display_name": "Max Retries",
-                "dynamic": false,
-                "info": "The maximum number of retries to make when generating.",
-                "list": false,
-                "list_add_label": "Add More",
-                "name": "max_retries",
-                "placeholder": "",
-                "required": false,
-                "show": true,
-                "title_case": false,
-                "tool_mode": false,
-                "trace_as_metadata": true,
-                "type": "int",
-                "value": 5
-              },
-              "max_tokens": {
-                "_input_type": "IntInput",
-                "advanced": true,
-                "display_name": "Max Tokens",
-                "dynamic": false,
-                "info": "The maximum number of tokens to generate. Set to 0 for unlimited tokens.",
-                "list": false,
-                "list_add_label": "Add More",
-                "name": "max_tokens",
-                "placeholder": "",
-                "range_spec": {
-                  "max": 128000,
-                  "min": 0,
-                  "step": 0.1,
-                  "step_type": "float"
-                },
-                "required": false,
-                "show": true,
-                "title_case": false,
-                "tool_mode": false,
-                "trace_as_metadata": true,
-                "type": "int",
-                "value": ""
-              },
-              "model_kwargs": {
-                "_input_type": "DictInput",
-                "advanced": true,
-                "display_name": "Model Kwargs",
-                "dynamic": false,
-                "info": "Additional keyword arguments to pass to the model.",
-                "list": false,
-                "list_add_label": "Add More",
-                "name": "model_kwargs",
-                "placeholder": "",
-                "required": false,
-                "show": true,
-                "title_case": false,
-                "tool_mode": false,
-                "trace_as_input": true,
-                "type": "dict",
-                "value": {}
-              },
-              "model_name": {
-                "_input_type": "DropdownInput",
-                "advanced": false,
-                "combobox": true,
-                "dialog_inputs": {},
-                "display_name": "Model Name",
-                "dynamic": false,
-                "info": "To see the model names, first choose a provider. Then, enter your API key and click the refresh button next to the model name.",
-                "load_from_db": false,
-                "name": "model_name",
-                "options": [
-                  "gpt-4o-mini",
-                  "gpt-4o",
-                  "gpt-4.1",
-                  "gpt-4.1-mini",
-                  "gpt-4.1-nano",
-                  "gpt-4-turbo",
-                  "gpt-4-turbo-preview",
-                  "gpt-4",
-                  "gpt-3.5-turbo",
-                  "gpt-5",
-                  "gpt-5-mini",
-                  "gpt-5-nano",
-                  "gpt-5-chat-latest",
-                  "o1",
-                  "o3-mini",
-                  "o3",
-                  "o3-pro",
-                  "o4-mini",
-                  "o4-mini-high"
-                ],
-                "options_metadata": [],
-                "placeholder": "",
-                "real_time_refresh": false,
-                "required": false,
-                "show": true,
-                "title_case": false,
-                "toggle": false,
-                "tool_mode": false,
-                "trace_as_metadata": true,
-                "type": "str",
-                "value": "gpt-4.1"
-              },
               "n_messages": {
                 "_input_type": "IntInput",
                 "advanced": true,
                 "display_name": "Number of Chat History Messages",
                 "dynamic": false,
                 "info": "Number of chat history messages to retrieve.",
+                "input_types": [],
                 "list": false,
                 "list_add_label": "Add More",
                 "name": "n_messages",
@@ -1365,31 +1207,13 @@
                 "type": "int",
                 "value": 100
               },
-              "openai_api_base": {
-                "_input_type": "StrInput",
-                "advanced": true,
-                "display_name": "OpenAI API Base",
-                "dynamic": false,
-                "info": "The base URL of the OpenAI API. Defaults to https://api.openai.com/v1. You can change this to use other APIs like JinaChat, LocalAI and Prem.",
-                "list": false,
-                "list_add_label": "Add More",
-                "load_from_db": false,
-                "name": "openai_api_base",
-                "placeholder": "",
-                "required": false,
-                "show": true,
-                "title_case": false,
-                "tool_mode": false,
-                "trace_as_metadata": true,
-                "type": "str",
-                "value": ""
-              },
               "output_schema": {
                 "_input_type": "TableInput",
                 "advanced": true,
                 "display_name": "Output Schema",
                 "dynamic": false,
                 "info": "Schema Validation: Define the structure and data types for structured output. No validation if no output schema.",
+                "input_types": [],
                 "is_list": true,
                 "list_add_label": "Add More",
                 "name": "output_schema",
@@ -1403,6 +1227,7 @@
                     "description": "Specify the name of the output field.",
                     "display_name": "Name",
                     "edit_mode": "inline",
+                    "formatter": "text",
                     "name": "name",
                     "type": "str"
                   },
@@ -1411,6 +1236,7 @@
                     "description": "Describe the purpose of the output field.",
                     "display_name": "Description",
                     "edit_mode": "popover",
+                    "formatter": "text",
                     "name": "description",
                     "type": "str"
                   },
@@ -1419,6 +1245,7 @@
                     "description": "Indicate the data type of the output field (e.g., str, int, float, bool, dict).",
                     "display_name": "Type",
                     "edit_mode": "inline",
+                    "formatter": "text",
                     "name": "type",
                     "options": [
                       "str",
@@ -1434,6 +1261,7 @@
                     "description": "Set to True if this output field should be a list of the specified type.",
                     "display_name": "As List",
                     "edit_mode": "inline",
+                    "formatter": "text",
                     "name": "multiple",
                     "type": "boolean"
                   }
@@ -1445,43 +1273,6 @@
                 "trigger_text": "Open table",
                 "type": "table",
                 "value": []
-              },
-              "project_id": {
-                "_input_type": "StrInput",
-                "advanced": false,
-                "display_name": "Project ID",
-                "dynamic": false,
-                "info": "The project ID of the model.",
-                "list": false,
-                "list_add_label": "Add More",
-                "load_from_db": false,
-                "name": "project_id",
-                "placeholder": "",
-                "required": true,
-                "show": false,
-                "title_case": false,
-                "tool_mode": false,
-                "trace_as_metadata": true,
-                "type": "str",
-                "value": ""
-              },
-              "seed": {
-                "_input_type": "IntInput",
-                "advanced": true,
-                "display_name": "Seed",
-                "dynamic": false,
-                "info": "The seed controls the reproducibility of the job.",
-                "list": false,
-                "list_add_label": "Add More",
-                "name": "seed",
-                "placeholder": "",
-                "required": false,
-                "show": true,
-                "title_case": false,
-                "tool_mode": false,
-                "trace_as_metadata": true,
-                "type": "int",
-                "value": 1
               },
               "system_prompt": {
                 "_input_type": "MultilineInput",
@@ -1507,52 +1298,6 @@
                 "trace_as_metadata": true,
                 "type": "str",
                 "value": "You are a helpful assistant that can use tools to answer questions and perform tasks."
-              },
-              "temperature": {
-                "_input_type": "SliderInput",
-                "advanced": true,
-                "display_name": "Temperature",
-                "dynamic": false,
-                "info": "",
-                "max_label": "",
-                "max_label_icon": "",
-                "min_label": "",
-                "min_label_icon": "",
-                "name": "temperature",
-                "placeholder": "",
-                "range_spec": {
-                  "max": 1,
-                  "min": 0,
-                  "step": 0.01,
-                  "step_type": "float"
-                },
-                "required": false,
-                "show": true,
-                "slider_buttons": false,
-                "slider_buttons_options": [],
-                "slider_input": false,
-                "title_case": false,
-                "tool_mode": false,
-                "type": "slider",
-                "value": 0.1
-              },
-              "timeout": {
-                "_input_type": "IntInput",
-                "advanced": true,
-                "display_name": "Timeout",
-                "dynamic": false,
-                "info": "The timeout for requests to OpenAI completion API.",
-                "list": false,
-                "list_add_label": "Add More",
-                "name": "timeout",
-                "placeholder": "",
-                "required": false,
-                "show": true,
-                "title_case": false,
-                "tool_mode": false,
-                "trace_as_metadata": true,
-                "type": "int",
-                "value": 700
               },
               "tools": {
                 "_input_type": "HandleInput",
@@ -1580,6 +1325,7 @@
                 "display_name": "Verbose",
                 "dynamic": false,
                 "info": "",
+                "input_types": [],
                 "list": false,
                 "list_add_label": "Add More",
                 "name": "verbose",
@@ -1600,21 +1346,21 @@
           "type": "Agent"
         },
         "dragging": false,
-        "id": "Agent-D0Kx2",
+        "id": "Agent-0hbdV",
         "measured": {
-          "height": 594,
+          "height": 427,
           "width": 320
         },
         "position": {
-          "x": 1641.6239626366948,
-          "y": 301.10345101561927
+          "x": 1738.2604045236367,
+          "y": 350.80219255747517
         },
-        "selected": true,
+        "selected": false,
         "type": "genericNode"
       },
       {
         "data": {
-          "id": "URLComponent-TpTHB",
+          "id": "URLComponent-5phii",
           "node": {
             "base_classes": [
               "DataFrame",
@@ -1644,7 +1390,9 @@
             "frozen": false,
             "icon": "layout-template",
             "key": "URLComponent",
+            "last_updated": "2025-11-07T19:33:15.645Z",
             "legacy": false,
+            "lf_version": "1.7.0",
             "metadata": {
               "code_hash": "cdb7d379306e",
               "dependencies": {
@@ -2020,9 +1768,9 @@
           "type": "URLComponent"
         },
         "dragging": false,
-        "id": "URLComponent-TpTHB",
+        "id": "URLComponent-5phii",
         "measured": {
-          "height": 290,
+          "height": 289,
           "width": 320
         },
         "position": {
@@ -2031,19 +1779,442 @@
         },
         "selected": false,
         "type": "genericNode"
+      },
+      {
+        "data": {
+          "id": "LanguageModelComponent-3ChBu",
+          "node": {
+            "base_classes": [
+              "LanguageModel",
+              "Message"
+            ],
+            "beta": false,
+            "conditional_paths": [],
+            "custom_fields": {},
+            "description": "Runs a language model given a specified provider.",
+            "display_name": "Language Model",
+            "documentation": "https://docs.langflow.org/components-models",
+            "edited": false,
+            "field_order": [
+              "provider",
+              "model_name",
+              "api_key",
+              "openai_base_url",
+              "base_url_ibm_watsonx",
+              "project_id",
+              "ollama_base_url",
+              "input_value",
+              "system_message",
+              "stream",
+              "temperature"
+            ],
+            "frozen": false,
+            "icon": "brain-circuit",
+            "last_updated": "2025-11-07T19:33:15.648Z",
+            "legacy": false,
+            "lf_version": "1.7.0",
+            "metadata": {
+              "code_hash": "6473e34e3e48",
+              "dependencies": {
+                "dependencies": [
+                  {
+                    "name": "requests",
+                    "version": "2.32.5"
+                  },
+                  {
+                    "name": "langchain_anthropic",
+                    "version": "0.3.14"
+                  },
+                  {
+                    "name": "langchain_ibm",
+                    "version": "0.3.19"
+                  },
+                  {
+                    "name": "langchain_ollama",
+                    "version": "0.3.10"
+                  },
+                  {
+                    "name": "langchain_openai",
+                    "version": "0.3.23"
+                  },
+                  {
+                    "name": "pydantic",
+                    "version": "2.10.6"
+                  },
+                  {
+                    "name": "lfx",
+                    "version": null
+                  }
+                ],
+                "total_dependencies": 7
+              },
+              "keywords": [
+                "model",
+                "llm",
+                "language model",
+                "large language model"
+              ],
+              "module": "lfx.components.models.language_model.LanguageModelComponent"
+            },
+            "minimized": false,
+            "output_types": [],
+            "outputs": [
+              {
+                "allows_loop": false,
+                "cache": true,
+                "display_name": "Model Response",
+                "group_outputs": false,
+                "method": "text_response",
+                "name": "text_output",
+                "options": null,
+                "required_inputs": null,
+                "selected": "Message",
+                "tool_mode": true,
+                "types": [
+                  "Message"
+                ],
+                "value": "__UNDEFINED__"
+              },
+              {
+                "allows_loop": false,
+                "cache": true,
+                "display_name": "Language Model",
+                "group_outputs": false,
+                "method": "build_model",
+                "name": "model_output",
+                "options": null,
+                "required_inputs": null,
+                "selected": "LanguageModel",
+                "tool_mode": true,
+                "types": [
+                  "LanguageModel"
+                ],
+                "value": "__UNDEFINED__"
+              }
+            ],
+            "pinned": false,
+            "priority": 0,
+            "template": {
+              "_type": "Component",
+              "api_key": {
+                "_input_type": "SecretStrInput",
+                "advanced": false,
+                "display_name": "OpenAI API Key",
+                "dynamic": false,
+                "info": "Model Provider API key",
+                "input_types": [],
+                "load_from_db": false,
+                "name": "api_key",
+                "password": true,
+                "placeholder": "",
+                "real_time_refresh": true,
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "type": "str",
+                "value": ""
+              },
+              "base_url_ibm_watsonx": {
+                "_input_type": "DropdownInput",
+                "advanced": false,
+                "combobox": false,
+                "dialog_inputs": {},
+                "display_name": "watsonx API Endpoint",
+                "dynamic": false,
+                "external_options": {},
+                "info": "The base URL of the API (IBM watsonx.ai only)",
+                "name": "base_url_ibm_watsonx",
+                "options": [
+                  "https://us-south.ml.cloud.ibm.com",
+                  "https://eu-de.ml.cloud.ibm.com",
+                  "https://eu-gb.ml.cloud.ibm.com",
+                  "https://au-syd.ml.cloud.ibm.com",
+                  "https://jp-tok.ml.cloud.ibm.com",
+                  "https://ca-tor.ml.cloud.ibm.com"
+                ],
+                "options_metadata": [],
+                "placeholder": "",
+                "real_time_refresh": true,
+                "required": false,
+                "show": false,
+                "title_case": false,
+                "toggle": false,
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "type": "str",
+                "value": "https://us-south.ml.cloud.ibm.com"
+              },
+              "code": {
+                "advanced": true,
+                "dynamic": true,
+                "fileTypes": [],
+                "file_path": "",
+                "info": "",
+                "list": false,
+                "load_from_db": false,
+                "multiline": true,
+                "name": "code",
+                "password": false,
+                "placeholder": "",
+                "required": true,
+                "show": true,
+                "title_case": false,
+                "type": "code",
+                "value": "from typing import Any\nfrom urllib.parse import urljoin\n\nimport requests\nfrom langchain_anthropic import ChatAnthropic\nfrom langchain_ibm import ChatWatsonx\nfrom langchain_ollama import ChatOllama\nfrom langchain_openai import ChatOpenAI\nfrom pydantic.v1 import SecretStr\n\nfrom lfx.base.models.anthropic_constants import ANTHROPIC_MODELS\nfrom lfx.base.models.google_generative_ai_constants import GOOGLE_GENERATIVE_AI_MODELS\nfrom lfx.base.models.google_generative_ai_model import ChatGoogleGenerativeAIFixed\nfrom lfx.base.models.model import LCModelComponent\n\n# Removed unused OpenAI constants - using StrInput for manual model entry\n# from lfx.base.models.openai_constants import OPENAI_CHAT_MODEL_NAMES, OPENAI_REASONING_MODEL_NAMES\nfrom lfx.field_typing import LanguageModel\nfrom lfx.field_typing.range_spec import RangeSpec\nfrom lfx.inputs.inputs import BoolInput, MessageTextInput, StrInput\nfrom lfx.io import DropdownInput, MessageInput, MultilineInput, SecretStrInput, SliderInput\nfrom lfx.log.logger import logger\nfrom lfx.schema.dotdict import dotdict\nfrom lfx.utils.util import transform_localhost_url\n\n# IBM watsonx.ai constants\nIBM_WATSONX_DEFAULT_MODELS = [\"ibm/granite-3-2b-instruct\", \"ibm/granite-3-8b-instruct\", \"ibm/granite-13b-instruct-v2\"]\nIBM_WATSONX_URLS = [\n    \"https://us-south.ml.cloud.ibm.com\",\n    \"https://eu-de.ml.cloud.ibm.com\",\n    \"https://eu-gb.ml.cloud.ibm.com\",\n    \"https://au-syd.ml.cloud.ibm.com\",\n    \"https://jp-tok.ml.cloud.ibm.com\",\n    \"https://ca-tor.ml.cloud.ibm.com\",\n]\n\n\nclass LanguageModelComponent(LCModelComponent):\n    display_name = \"Language Model\"\n    description = \"Runs a language model given a specified provider.\"\n    documentation: str = \"https://docs.langflow.org/components-models\"\n    icon = \"brain-circuit\"\n    category = \"models\"\n    priority = 0  # Set priority to 0 to make it appear first\n\n    @staticmethod\n    def fetch_ibm_models(base_url: str) -> list[str]:\n        \"\"\"Fetch available models from the watsonx.ai API.\"\"\"\n        try:\n            endpoint = f\"{base_url}/ml/v1/foundation_model_specs\"\n            params = {\"version\": \"2024-09-16\", \"filters\": \"function_text_chat,!lifecycle_withdrawn\"}\n            response = requests.get(endpoint, params=params, timeout=10)\n            response.raise_for_status()\n            data = response.json()\n            models = [model[\"model_id\"] for model in data.get(\"resources\", [])]\n            return sorted(models)\n        except Exception:  # noqa: BLE001\n            logger.exception(\"Error fetching IBM watsonx models. Using default models.\")\n            return IBM_WATSONX_DEFAULT_MODELS\n\n    @staticmethod\n    def fetch_ollama_models(base_url: str) -> list[str]:\n        \"\"\"Fetch available models from the Ollama API.\"\"\"\n        try:\n            # Strip /v1 suffix if present, as Ollama API endpoints are at root level\n            base_url = base_url.rstrip(\"/\").removesuffix(\"/v1\")\n            if not base_url.endswith(\"/\"):\n                base_url = base_url + \"/\"\n            base_url = transform_localhost_url(base_url)\n\n            # Ollama REST API to return models\n            tags_url = urljoin(base_url, \"api/tags\")\n\n            response = requests.get(tags_url, timeout=10)\n            response.raise_for_status()\n            data = response.json()\n            models = [model[\"name\"] for model in data.get(\"models\", [])]\n            return sorted(models)\n        except Exception:  # noqa: BLE001\n            logger.exception(\"Error fetching Ollama models. Returning empty list.\")\n            return []\n\n    inputs = [\n        DropdownInput(\n            name=\"provider\",\n            display_name=\"Model Provider\",\n            options=[\"OpenAI\", \"Anthropic\", \"Google\", \"IBM watsonx.ai\", \"Ollama\"],\n            value=\"OpenAI\",\n            info=\"Select the model provider\",\n            real_time_refresh=True,\n            options_metadata=[\n                {\"icon\": \"OpenAI\"},\n                {\"icon\": \"Anthropic\"},\n                {\"icon\": \"GoogleGenerativeAI\"},\n                {\"icon\": \"WatsonxAI\"},\n                {\"icon\": \"Ollama\"},\n            ],\n        ),\n        StrInput(\n            name=\"model_name\",\n            display_name=\"Model Name\",\n            value=\"gpt-4o\",\n            info=\"Enter the model name manually (e.g., 'gpt-4o', 'claude-3-5-sonnet-20241022', 'gemini-2.0-flash-exp')\",\n            real_time_refresh=True,\n            required=True,\n        ),\n        SecretStrInput(\n            name=\"api_key\",\n            display_name=\"OpenAI API Key\",\n            info=\"Model Provider API key\",\n            required=False,\n            show=True,\n            real_time_refresh=True,\n        ),\n        StrInput(\n            name=\"openai_base_url\",\n            display_name=\"OpenAI API Base URL\",\n            info=(\n                \"The base URL of the OpenAI API. Defaults to https://api.openai.com/v1. \"\n                \"You can change this to use other APIs like OpenAI-compatible endpoints.\"\n            ),\n            value=\"https://api.openai.com/v1\",\n            show=True,\n            advanced=True,\n            required=False,\n        ),\n        DropdownInput(\n            name=\"base_url_ibm_watsonx\",\n            display_name=\"watsonx API Endpoint\",\n            info=\"The base URL of the API (IBM watsonx.ai only)\",\n            options=IBM_WATSONX_URLS,\n            value=IBM_WATSONX_URLS[0],\n            show=False,\n            real_time_refresh=True,\n        ),\n        StrInput(\n            name=\"project_id\",\n            display_name=\"watsonx Project ID\",\n            info=\"The project ID associated with the foundation model (IBM watsonx.ai only)\",\n            show=False,\n            required=False,\n        ),\n        MessageTextInput(\n            name=\"ollama_base_url\",\n            display_name=\"Ollama API URL\",\n            info=\"Endpoint of the Ollama API (Ollama only). Defaults to http://localhost:11434\",\n            value=\"http://localhost:11434\",\n            show=False,\n            real_time_refresh=True,\n        ),\n        MessageInput(\n            name=\"input_value\",\n            display_name=\"Input\",\n            info=\"The input text to send to the model\",\n        ),\n        MultilineInput(\n            name=\"system_message\",\n            display_name=\"System Message\",\n            info=\"A system message that helps set the behavior of the assistant\",\n            advanced=False,\n        ),\n        BoolInput(\n            name=\"stream\",\n            display_name=\"Stream\",\n            info=\"Whether to stream the response\",\n            value=False,\n            advanced=True,\n        ),\n        SliderInput(\n            name=\"temperature\",\n            display_name=\"Temperature\",\n            value=0.1,\n            info=\"Controls randomness in responses\",\n            range_spec=RangeSpec(min=0, max=1, step=0.01),\n            advanced=True,\n        ),\n    ]\n\n    def build_model(self) -> LanguageModel:\n        provider = self.provider\n        model_name = self.model_name\n        temperature = self.temperature\n        stream = self.stream\n\n        if provider == \"OpenAI\":\n            if not self.api_key:\n                msg = \"OpenAI API key is required when using OpenAI provider\"\n                raise ValueError(msg)\n\n            # Always pass temperature - the API will handle it appropriately\n            return ChatOpenAI(\n                model_name=model_name,\n                temperature=temperature,\n                streaming=stream,\n                openai_api_key=self.api_key,\n                base_url=self.openai_base_url or \"https://api.openai.com/v1\",\n            )\n        if provider == \"Anthropic\":\n            if not self.api_key:\n                msg = \"Anthropic API key is required when using Anthropic provider\"\n                raise ValueError(msg)\n            return ChatAnthropic(\n                model=model_name,\n                temperature=temperature,\n                streaming=stream,\n                anthropic_api_key=self.api_key,\n            )\n        if provider == \"Google\":\n            if not self.api_key:\n                msg = \"Google API key is required when using Google provider\"\n                raise ValueError(msg)\n            return ChatGoogleGenerativeAIFixed(\n                model=model_name,\n                temperature=temperature,\n                streaming=stream,\n                google_api_key=self.api_key,\n            )\n        if provider == \"IBM watsonx.ai\":\n            if not self.api_key:\n                msg = \"IBM API key is required when using IBM watsonx.ai provider\"\n                raise ValueError(msg)\n            if not self.base_url_ibm_watsonx:\n                msg = \"IBM watsonx API Endpoint is required when using IBM watsonx.ai provider\"\n                raise ValueError(msg)\n            if not self.project_id:\n                msg = \"IBM watsonx Project ID is required when using IBM watsonx.ai provider\"\n                raise ValueError(msg)\n            return ChatWatsonx(\n                apikey=SecretStr(self.api_key).get_secret_value(),\n                url=self.base_url_ibm_watsonx,\n                project_id=self.project_id,\n                model_id=model_name,\n                params={\n                    \"temperature\": temperature,\n                },\n                streaming=stream,\n            )\n        if provider == \"Ollama\":\n            if not self.ollama_base_url:\n                msg = \"Ollama API URL is required when using Ollama provider\"\n                raise ValueError(msg)\n            if not model_name:\n                msg = \"Model name is required when using Ollama provider\"\n                raise ValueError(msg)\n\n            transformed_base_url = transform_localhost_url(self.ollama_base_url)\n\n            # Check if URL contains /v1 suffix (OpenAI-compatible mode)\n            if transformed_base_url and transformed_base_url.rstrip(\"/\").endswith(\"/v1\"):\n                # Strip /v1 suffix and log warning\n                transformed_base_url = transformed_base_url.rstrip(\"/\").removesuffix(\"/v1\")\n                logger.warning(\n                    \"Detected '/v1' suffix in base URL. The Ollama component uses the native Ollama API, \"\n                    \"not the OpenAI-compatible API. The '/v1' suffix has been automatically removed. \"\n                    \"If you want to use the OpenAI-compatible API, please use the OpenAI component instead. \"\n                    \"Learn more at https://docs.ollama.com/openai#openai-compatibility\"\n                )\n\n            return ChatOllama(\n                base_url=transformed_base_url,\n                model=model_name,\n                temperature=temperature,\n            )\n        msg = f\"Unknown provider: {provider}\"\n        raise ValueError(msg)\n\n    def update_build_config(self, build_config: dotdict, field_value: Any, field_name: str | None = None) -> dotdict:\n        if field_name == \"provider\":\n            if field_value == \"OpenAI\":\n                # Using StrInput for model_name, so just set a default value\n                build_config[\"model_name\"][\"value\"] = \"gpt-4o\"\n                build_config[\"api_key\"][\"display_name\"] = \"OpenAI API Key\"\n                build_config[\"api_key\"][\"show\"] = True\n                build_config[\"openai_base_url\"][\"show\"] = True\n                build_config[\"base_url_ibm_watsonx\"][\"show\"] = False\n                build_config[\"project_id\"][\"show\"] = False\n                build_config[\"ollama_base_url\"][\"show\"] = False\n            elif field_value == \"Anthropic\":\n                build_config[\"model_name\"][\"value\"] = (\n                    ANTHROPIC_MODELS[0] if ANTHROPIC_MODELS else \"claude-3-5-sonnet-20241022\"\n                )\n                build_config[\"api_key\"][\"display_name\"] = \"Anthropic API Key\"\n                build_config[\"api_key\"][\"show\"] = True\n                build_config[\"openai_base_url\"][\"show\"] = False\n                build_config[\"base_url_ibm_watsonx\"][\"show\"] = False\n                build_config[\"project_id\"][\"show\"] = False\n                build_config[\"ollama_base_url\"][\"show\"] = False\n            elif field_value == \"Google\":\n                build_config[\"model_name\"][\"value\"] = (\n                    GOOGLE_GENERATIVE_AI_MODELS[0] if GOOGLE_GENERATIVE_AI_MODELS else \"gemini-2.0-flash-exp\"\n                )\n                build_config[\"api_key\"][\"display_name\"] = \"Google API Key\"\n                build_config[\"api_key\"][\"show\"] = True\n                build_config[\"openai_base_url\"][\"show\"] = False\n                build_config[\"base_url_ibm_watsonx\"][\"show\"] = False\n                build_config[\"project_id\"][\"show\"] = False\n                build_config[\"ollama_base_url\"][\"show\"] = False\n            elif field_value == \"IBM watsonx.ai\":\n                build_config[\"model_name\"][\"value\"] = (\n                    IBM_WATSONX_DEFAULT_MODELS[0] if IBM_WATSONX_DEFAULT_MODELS else \"ibm/granite-3-8b-instruct\"\n                )\n                build_config[\"api_key\"][\"display_name\"] = \"IBM API Key\"\n                build_config[\"api_key\"][\"show\"] = True\n                build_config[\"openai_base_url\"][\"show\"] = False\n                build_config[\"base_url_ibm_watsonx\"][\"show\"] = True\n                build_config[\"project_id\"][\"show\"] = True\n                build_config[\"ollama_base_url\"][\"show\"] = False\n            elif field_value == \"Ollama\":\n                # Fetch Ollama models from the API\n                ollama_url = build_config[\"ollama_base_url\"].get(\"value\", \"http://localhost:11434\")\n                models = self.fetch_ollama_models(base_url=ollama_url)\n                build_config[\"model_name\"][\"value\"] = models[0] if models else \"\"\n                build_config[\"api_key\"][\"show\"] = False\n                build_config[\"openai_base_url\"][\"show\"] = False\n                build_config[\"base_url_ibm_watsonx\"][\"show\"] = False\n                build_config[\"project_id\"][\"show\"] = False\n                build_config[\"ollama_base_url\"][\"show\"] = True\n        elif (\n            field_name == \"base_url_ibm_watsonx\"\n            and field_value\n            and hasattr(self, \"provider\")\n            and self.provider == \"IBM watsonx.ai\"\n        ):\n            # Fetch IBM models when base_url changes and update the value\n            try:\n                models = self.fetch_ibm_models(base_url=field_value)\n                build_config[\"model_name\"][\"value\"] = models[0] if models else IBM_WATSONX_DEFAULT_MODELS[0]\n                info_message = f\"Updated model value: {len(models)} models found in {field_value}\"\n                logger.info(info_message)\n            except Exception:  # noqa: BLE001\n                logger.exception(\"Error updating IBM model value.\")\n        elif (\n            field_name == \"ollama_base_url\" and field_value and hasattr(self, \"provider\") and self.provider == \"Ollama\"\n        ):\n            # Fetch Ollama models when ollama_base_url changes and update the value\n            try:\n                models = self.fetch_ollama_models(base_url=field_value)\n                build_config[\"model_name\"][\"value\"] = models[0] if models else \"\"\n                info_message = f\"Updated model value: {len(models)} models found in {field_value}\"\n                logger.info(info_message)\n            except Exception:  # noqa: BLE001\n                logger.exception(\"Error updating Ollama model value.\")\n        # No longer hiding system_message or other fields based on model name\n        return build_config\n"
+              },
+              "input_value": {
+                "_input_type": "MessageInput",
+                "advanced": false,
+                "display_name": "Input",
+                "dynamic": false,
+                "info": "The input text to send to the model",
+                "input_types": [
+                  "Message"
+                ],
+                "list": false,
+                "list_add_label": "Add More",
+                "load_from_db": false,
+                "name": "input_value",
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_input": true,
+                "trace_as_metadata": true,
+                "type": "str",
+                "value": ""
+              },
+              "model_name": {
+                "_input_type": "StrInput",
+                "advanced": false,
+                "display_name": "Model Name",
+                "dynamic": false,
+                "info": "Enter the model name manually (e.g., 'gpt-4o', 'claude-3-5-sonnet-20241022', 'gemini-2.0-flash-exp')",
+                "list": false,
+                "list_add_label": "Add More",
+                "load_from_db": false,
+                "name": "model_name",
+                "placeholder": "",
+                "real_time_refresh": true,
+                "required": true,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "type": "str",
+                "value": "meta-llama/Llama-3.1-8B-Instruct"
+              },
+              "ollama_base_url": {
+                "_input_type": "MessageTextInput",
+                "advanced": false,
+                "display_name": "Ollama API URL",
+                "dynamic": false,
+                "info": "Endpoint of the Ollama API (Ollama only). Defaults to http://localhost:11434",
+                "input_types": [
+                  "Message"
+                ],
+                "list": false,
+                "list_add_label": "Add More",
+                "load_from_db": false,
+                "name": "ollama_base_url",
+                "placeholder": "",
+                "real_time_refresh": true,
+                "required": false,
+                "show": false,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_input": true,
+                "trace_as_metadata": true,
+                "type": "str",
+                "value": "http://localhost:11434"
+              },
+              "openai_base_url": {
+                "_input_type": "StrInput",
+                "advanced": false,
+                "display_name": "OpenAI API Base URL",
+                "dynamic": false,
+                "info": "The base URL of the OpenAI API. Defaults to https://api.openai.com/v1. You can change this to use other APIs like OpenAI-compatible endpoints.",
+                "list": false,
+                "list_add_label": "Add More",
+                "load_from_db": false,
+                "name": "openai_base_url",
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "type": "str",
+                "value": "http://52.91.14.233:11434/v1"
+              },
+              "project_id": {
+                "_input_type": "StrInput",
+                "advanced": false,
+                "display_name": "watsonx Project ID",
+                "dynamic": false,
+                "info": "The project ID associated with the foundation model (IBM watsonx.ai only)",
+                "list": false,
+                "list_add_label": "Add More",
+                "load_from_db": false,
+                "name": "project_id",
+                "placeholder": "",
+                "required": false,
+                "show": false,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "type": "str",
+                "value": ""
+              },
+              "provider": {
+                "_input_type": "DropdownInput",
+                "advanced": false,
+                "combobox": false,
+                "dialog_inputs": {},
+                "display_name": "Model Provider",
+                "dynamic": false,
+                "external_options": {},
+                "info": "Select the model provider",
+                "name": "provider",
+                "options": [
+                  "OpenAI",
+                  "Anthropic",
+                  "Google",
+                  "IBM watsonx.ai",
+                  "Ollama"
+                ],
+                "options_metadata": [
+                  {
+                    "icon": "OpenAI"
+                  },
+                  {
+                    "icon": "Anthropic"
+                  },
+                  {
+                    "icon": "GoogleGenerativeAI"
+                  },
+                  {
+                    "icon": "WatsonxAI"
+                  },
+                  {
+                    "icon": "Ollama"
+                  }
+                ],
+                "placeholder": "",
+                "real_time_refresh": true,
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "toggle": false,
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "type": "str",
+                "value": "OpenAI"
+              },
+              "stream": {
+                "_input_type": "BoolInput",
+                "advanced": true,
+                "display_name": "Stream",
+                "dynamic": false,
+                "info": "Whether to stream the response",
+                "list": false,
+                "list_add_label": "Add More",
+                "name": "stream",
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "type": "bool",
+                "value": false
+              },
+              "system_message": {
+                "_input_type": "MultilineInput",
+                "advanced": false,
+                "copy_field": false,
+                "display_name": "System Message",
+                "dynamic": false,
+                "info": "A system message that helps set the behavior of the assistant",
+                "input_types": [
+                  "Message"
+                ],
+                "list": false,
+                "list_add_label": "Add More",
+                "load_from_db": false,
+                "multiline": true,
+                "name": "system_message",
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_input": true,
+                "trace_as_metadata": true,
+                "type": "str",
+                "value": ""
+              },
+              "temperature": {
+                "_input_type": "SliderInput",
+                "advanced": true,
+                "display_name": "Temperature",
+                "dynamic": false,
+                "info": "Controls randomness in responses",
+                "max_label": "",
+                "max_label_icon": "",
+                "min_label": "",
+                "min_label_icon": "",
+                "name": "temperature",
+                "placeholder": "",
+                "range_spec": {
+                  "max": 1,
+                  "min": 0,
+                  "step": 0.01,
+                  "step_type": "float"
+                },
+                "required": false,
+                "show": true,
+                "slider_buttons": false,
+                "slider_buttons_options": [],
+                "slider_input": false,
+                "title_case": false,
+                "tool_mode": false,
+                "type": "slider",
+                "value": 0.1
+              }
+            },
+            "tool_mode": false
+          },
+          "selected_output": "model_output",
+          "showNode": true,
+          "type": "LanguageModelComponent"
+        },
+        "dragging": false,
+        "id": "LanguageModelComponent-3ChBu",
+        "measured": {
+          "height": 613,
+          "width": 320
+        },
+        "position": {
+          "x": 1725.5017969263656,
+          "y": -331.185086835744
+        },
+        "selected": false,
+        "type": "genericNode"
       }
     ],
     "viewport": {
-      "x": -562.0961577584201,
-      "y": 188.68156067492384,
-      "zoom": 0.8264000374576776
+      "x": -361.40044368467466,
+      "y": 274.1164921145995,
+      "zoom": 0.6978469179357253
     }
   },
   "description": "A simple but powerful starter agent.",
   "endpoint_name": null,
-  "id": "0209ae03-677e-4315-b80a-0d90b3e12cb5",
+  "id": "a006587c-9998-4d8c-aa48-dbe4424b61ba",
   "is_component": false,
-  "last_tested_version": "1.4.3",
+  "last_tested_version": "1.7.0",
   "name": "Simple Agent",
   "tags": [
     "assistants",

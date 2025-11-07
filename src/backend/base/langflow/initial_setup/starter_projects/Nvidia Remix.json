@@ -1216,7 +1216,7 @@
                 "options_metadata": [],
                 "placeholder": "",
                 "real_time_refresh": false,
-                "required": false,
+                "required": true,
                 "show": true,
                 "title_case": false,
                 "toggle": false,
