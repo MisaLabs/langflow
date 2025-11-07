@@ -12,7 +12,9 @@ from lfx.base.models.anthropic_constants import ANTHROPIC_MODELS
 from lfx.base.models.google_generative_ai_constants import GOOGLE_GENERATIVE_AI_MODELS
 from lfx.base.models.google_generative_ai_model import ChatGoogleGenerativeAIFixed
 from lfx.base.models.model import LCModelComponent
-from lfx.base.models.openai_constants import OPENAI_CHAT_MODEL_NAMES, OPENAI_REASONING_MODEL_NAMES
+
+# Removed unused OpenAI constants - using StrInput for manual model entry
+# from lfx.base.models.openai_constants import OPENAI_CHAT_MODEL_NAMES, OPENAI_REASONING_MODEL_NAMES
 from lfx.field_typing import LanguageModel
 from lfx.field_typing.range_spec import RangeSpec
 from lfx.inputs.inputs import BoolInput, MessageTextInput, StrInput
@@ -94,13 +96,13 @@ class LanguageModelComponent(LCModelComponent):
                 {"icon": "Ollama"},
             ],
         ),
-        DropdownInput(
+        StrInput(
             name="model_name",
             display_name="Model Name",
-            options=OPENAI_CHAT_MODEL_NAMES + OPENAI_REASONING_MODEL_NAMES,
-            value=OPENAI_CHAT_MODEL_NAMES[0],
-            info="Select the model to use",
+            value="gpt-4o",
+            info="Enter the model name manually (e.g., 'gpt-4o', 'claude-3-5-sonnet-20241022', 'gemini-2.0-flash-exp')",
             real_time_refresh=True,
+            required=True,
         ),
         SecretStrInput(
             name="api_key",
@@ -109,6 +111,18 @@ class LanguageModelComponent(LCModelComponent):
             required=False,
             show=True,
             real_time_refresh=True,
+        ),
+        StrInput(
+            name="openai_base_url",
+            display_name="OpenAI API Base URL",
+            info=(
+                "The base URL of the OpenAI API. Defaults to https://api.openai.com/v1. "
+                "You can change this to use other APIs like OpenAI-compatible endpoints."
+            ),
+            value="https://api.openai.com/v1",
+            show=True,
+            advanced=True,
+            required=False,
         ),
         DropdownInput(
             name="base_url_ibm_watsonx",
@@ -173,15 +187,13 @@ class LanguageModelComponent(LCModelComponent):
                 msg = "OpenAI API key is required when using OpenAI provider"
                 raise ValueError(msg)
 
-            if model_name in OPENAI_REASONING_MODEL_NAMES:
-                # reasoning models do not support temperature (yet)
-                temperature = None
-
+            # Always pass temperature - the API will handle it appropriately
             return ChatOpenAI(
                 model_name=model_name,
                 temperature=temperature,
                 streaming=stream,
                 openai_api_key=self.api_key,
+                base_url=self.openai_base_url or "https://api.openai.com/v1",
             )
         if provider == "Anthropic":
             if not self.api_key:
@@ -255,34 +267,41 @@ class LanguageModelComponent(LCModelComponent):
     def update_build_config(self, build_config: dotdict, field_value: Any, field_name: str | None = None) -> dotdict:
         if field_name == "provider":
             if field_value == "OpenAI":
-                build_config["model_name"]["options"] = OPENAI_CHAT_MODEL_NAMES + OPENAI_REASONING_MODEL_NAMES
-                build_config["model_name"]["value"] = OPENAI_CHAT_MODEL_NAMES[0]
+                # Using StrInput for model_name, so just set a default value
+                build_config["model_name"]["value"] = "gpt-4o"
                 build_config["api_key"]["display_name"] = "OpenAI API Key"
                 build_config["api_key"]["show"] = True
+                build_config["openai_base_url"]["show"] = True
                 build_config["base_url_ibm_watsonx"]["show"] = False
                 build_config["project_id"]["show"] = False
                 build_config["ollama_base_url"]["show"] = False
             elif field_value == "Anthropic":
-                build_config["model_name"]["options"] = ANTHROPIC_MODELS
-                build_config["model_name"]["value"] = ANTHROPIC_MODELS[0]
+                build_config["model_name"]["value"] = (
+                    ANTHROPIC_MODELS[0] if ANTHROPIC_MODELS else "claude-3-5-sonnet-20241022"
+                )
                 build_config["api_key"]["display_name"] = "Anthropic API Key"
                 build_config["api_key"]["show"] = True
+                build_config["openai_base_url"]["show"] = False
                 build_config["base_url_ibm_watsonx"]["show"] = False
                 build_config["project_id"]["show"] = False
                 build_config["ollama_base_url"]["show"] = False
             elif field_value == "Google":
-                build_config["model_name"]["options"] = GOOGLE_GENERATIVE_AI_MODELS
-                build_config["model_name"]["value"] = GOOGLE_GENERATIVE_AI_MODELS[0]
+                build_config["model_name"]["value"] = (
+                    GOOGLE_GENERATIVE_AI_MODELS[0] if GOOGLE_GENERATIVE_AI_MODELS else "gemini-2.0-flash-exp"
+                )
                 build_config["api_key"]["display_name"] = "Google API Key"
                 build_config["api_key"]["show"] = True
+                build_config["openai_base_url"]["show"] = False
                 build_config["base_url_ibm_watsonx"]["show"] = False
                 build_config["project_id"]["show"] = False
                 build_config["ollama_base_url"]["show"] = False
             elif field_value == "IBM watsonx.ai":
-                build_config["model_name"]["options"] = IBM_WATSONX_DEFAULT_MODELS
-                build_config["model_name"]["value"] = IBM_WATSONX_DEFAULT_MODELS[0]
+                build_config["model_name"]["value"] = (
+                    IBM_WATSONX_DEFAULT_MODELS[0] if IBM_WATSONX_DEFAULT_MODELS else "ibm/granite-3-8b-instruct"
+                )
                 build_config["api_key"]["display_name"] = "IBM API Key"
                 build_config["api_key"]["show"] = True
+                build_config["openai_base_url"]["show"] = False
                 build_config["base_url_ibm_watsonx"]["show"] = True
                 build_config["project_id"]["show"] = True
                 build_config["ollama_base_url"]["show"] = False
@@ -290,9 +309,9 @@ class LanguageModelComponent(LCModelComponent):
                 # Fetch Ollama models from the API
                 ollama_url = build_config["ollama_base_url"].get("value", "http://localhost:11434")
                 models = self.fetch_ollama_models(base_url=ollama_url)
-                build_config["model_name"]["options"] = models
                 build_config["model_name"]["value"] = models[0] if models else ""
                 build_config["api_key"]["show"] = False
+                build_config["openai_base_url"]["show"] = False
                 build_config["base_url_ibm_watsonx"]["show"] = False
                 build_config["project_id"]["show"] = False
                 build_config["ollama_base_url"]["show"] = True
@@ -302,31 +321,24 @@ class LanguageModelComponent(LCModelComponent):
             and hasattr(self, "provider")
             and self.provider == "IBM watsonx.ai"
         ):
-            # Fetch IBM models when base_url changes
+            # Fetch IBM models when base_url changes and update the value
             try:
                 models = self.fetch_ibm_models(base_url=field_value)
-                build_config["model_name"]["options"] = models
                 build_config["model_name"]["value"] = models[0] if models else IBM_WATSONX_DEFAULT_MODELS[0]
-                info_message = f"Updated model options: {len(models)} models found in {field_value}"
+                info_message = f"Updated model value: {len(models)} models found in {field_value}"
                 logger.info(info_message)
             except Exception:  # noqa: BLE001
-                logger.exception("Error updating IBM model options.")
+                logger.exception("Error updating IBM model value.")
         elif (
             field_name == "ollama_base_url" and field_value and hasattr(self, "provider") and self.provider == "Ollama"
         ):
-            # Fetch Ollama models when ollama_base_url changes
+            # Fetch Ollama models when ollama_base_url changes and update the value
             try:
                 models = self.fetch_ollama_models(base_url=field_value)
-                build_config["model_name"]["options"] = models
                 build_config["model_name"]["value"] = models[0] if models else ""
-                info_message = f"Updated model options: {len(models)} models found in {field_value}"
+                info_message = f"Updated model value: {len(models)} models found in {field_value}"
                 logger.info(info_message)
             except Exception:  # noqa: BLE001
-                logger.exception("Error updating Ollama model options.")
-        elif field_name == "model_name" and field_value.startswith("o1") and self.provider == "OpenAI":
-            # Hide system_message for o1 models - currently unsupported
-            if "system_message" in build_config:
-                build_config["system_message"]["show"] = False
-        elif field_name == "model_name" and not field_value.startswith("o1") and "system_message" in build_config:
-            build_config["system_message"]["show"] = True
+                logger.exception("Error updating Ollama model value.")
+        # No longer hiding system_message or other fields based on model name
         return build_config

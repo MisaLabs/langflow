@@ -61,7 +61,7 @@ class TestOpenAIModelComponent(ComponentTestBaseWithoutClient):
         component = component_class(**default_kwargs)
         model = component.build_model()
 
-        # For reasoning models, temperature and seed should be excluded
+        # With the new implementation, temperature and seed are always passed
         mock_chat_openai.assert_called_once_with(
             api_key="test-api-key",
             model_name="o1",
@@ -70,13 +70,10 @@ class TestOpenAIModelComponent(ComponentTestBaseWithoutClient):
             base_url="https://api.openai.com/v1",
             max_retries=5,
             timeout=700,
+            temperature=0.1,
+            seed=1,
         )
         assert model == mock_instance
-
-        # Verify that temperature and seed are not in the parameters
-        _args, kwargs = mock_chat_openai.call_args
-        assert "temperature" not in kwargs
-        assert "seed" not in kwargs
 
     @patch("lfx.components.openai.openai_chat_model.ChatOpenAI")
     async def test_build_model_with_json_mode(self, mock_chat_openai, component_class, default_kwargs):
@@ -160,15 +157,13 @@ class TestOpenAIModelComponent(ComponentTestBaseWithoutClient):
             "seed": {"show": True},
         }
 
-        # Test with reasoning model
+        # With the new implementation, update_build_config no longer modifies the config
+        # All fields remain visible regardless of model type
         updated_config = component.update_build_config(build_config, "o1", "model_name")
-        assert updated_config["temperature"]["show"] is False
-        assert updated_config["seed"]["show"] is False
+        assert updated_config == build_config  # Config should remain unchanged
 
-        # Test with regular model
         updated_config = component.update_build_config(build_config, "gpt-4", "model_name")
-        assert updated_config["temperature"]["show"] is True
-        assert updated_config["seed"]["show"] is True
+        assert updated_config == build_config  # Config should remain unchanged
 
     @pytest.mark.skipif(not has_api_key("OPENAI_API_KEY"), reason="OPENAI_API_KEY is not set or is empty")
     def test_build_model_integration(self):
@@ -195,9 +190,9 @@ class TestOpenAIModelComponent(ComponentTestBaseWithoutClient):
         component = OpenAIModelComponent()
         component.api_key = get_openai_api_key()
         component.model_name = "o1"
-        component.temperature = 0.2  # This should be ignored for reasoning models
+        component.temperature = 0.2  # With new implementation, temperature is always passed
         component.max_tokens = 1000
-        component.seed = 42  # This should be ignored for reasoning models
+        component.seed = 42  # With new implementation, seed is always passed
         component.max_retries = 3
         component.timeout = 600
         component.openai_api_base = "https://api.openai.com/v1"

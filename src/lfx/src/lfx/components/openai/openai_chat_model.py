@@ -4,10 +4,14 @@ from langchain_openai import ChatOpenAI
 from pydantic.v1 import SecretStr
 
 from lfx.base.models.model import LCModelComponent
-from lfx.base.models.openai_constants import OPENAI_CHAT_MODEL_NAMES, OPENAI_REASONING_MODEL_NAMES
+
+# Removed unused constants as we are no longer using a predefined list of models.
+# from lfx.base.models.openai_constants import OPENAI_CHAT_MODEL_NAMES, OPENAI_REASONING_MODEL_NAMES
 from lfx.field_typing import LanguageModel
 from lfx.field_typing.range_spec import RangeSpec
-from lfx.inputs.inputs import BoolInput, DictInput, DropdownInput, IntInput, SecretStrInput, SliderInput, StrInput
+
+# Removed DropdownInput as it's replaced by StrInput.
+from lfx.inputs.inputs import BoolInput, DictInput, IntInput, SecretStrInput, SliderInput, StrInput
 from lfx.log.logger import logger
 
 
@@ -38,15 +42,17 @@ class OpenAIModelComponent(LCModelComponent):
             advanced=True,
             info="If True, it will output JSON regardless of passing a schema.",
         ),
-        DropdownInput(
+        # ------------------- MAJOR CHANGE 1: Changed DropdownInput to StrInput -------------------
+        # This allows for manual entry of any model name, such as "gemini-2.5-pro".
+        StrInput(
             name="model_name",
             display_name="Model Name",
             advanced=False,
-            options=OPENAI_CHAT_MODEL_NAMES + OPENAI_REASONING_MODEL_NAMES,
-            value=OPENAI_CHAT_MODEL_NAMES[0],
-            combobox=True,
-            real_time_refresh=True,
+            info="Manually enter the model name, e.g., 'gpt-4o', 'gemini-2.5-pro', etc.",
+            value="gpt-4o",  # Provide a common default value.
+            required=True,
         ),
+        # -----------------------------------------------------------------------------------------
         StrInput(
             name="openai_api_base",
             display_name="OpenAI API Base",
@@ -121,21 +127,14 @@ class OpenAIModelComponent(LCModelComponent):
             "base_url": self.openai_api_base or "https://api.openai.com/v1",
             "max_retries": self.max_retries,
             "timeout": self.timeout,
+            # ------------------- MAJOR CHANGE 2: Removed conditional logic for parameters -------------------
+            # Since we can't determine the model type from a manual string, we always pass these parameters.
+            # The API endpoint is expected to either use them or ignore them if not supported.
+            "temperature": self.temperature,
+            "seed": self.seed,
+            # ------------------------------------------------------------------------------------------------
         }
 
-        # TODO: Revisit if/once parameters are supported for reasoning models
-        unsupported_params_for_reasoning_models = ["temperature", "seed"]
-
-        if self.model_name not in OPENAI_REASONING_MODEL_NAMES:
-            parameters["temperature"] = self.temperature if self.temperature is not None else 0.1
-            parameters["seed"] = self.seed
-        else:
-            params_str = ", ".join(unsupported_params_for_reasoning_models)
-            logger.debug(f"{self.model_name} is a reasoning model, {params_str} are not configurable. Ignoring.")
-
-        # Ensure all parameter values are the correct types
-        if isinstance(parameters.get("api_key"), SecretStr):
-            parameters["api_key"] = parameters["api_key"].get_secret_value()
         output = ChatOpenAI(**parameters)
         if self.json_mode:
             output = output.bind(response_format={"type": "json_object"})
@@ -161,16 +160,13 @@ class OpenAIModelComponent(LCModelComponent):
                 return message
         return None
 
-    def update_build_config(self, build_config: dict, field_value: Any, field_name: str | None = None) -> dict:
-        if field_name in {"base_url", "model_name", "api_key"} and field_value in OPENAI_REASONING_MODEL_NAMES:
-            build_config["temperature"]["show"] = False
-            build_config["seed"]["show"] = False
-            # Hide system_message for o1 models - currently unsupported
-            if field_value.startswith("o1") and "system_message" in build_config:
-                build_config["system_message"]["show"] = False
-        if field_name in {"base_url", "model_name", "api_key"} and field_value in OPENAI_CHAT_MODEL_NAMES:
-            build_config["temperature"]["show"] = True
-            build_config["seed"]["show"] = True
-            if "system_message" in build_config:
-                build_config["system_message"]["show"] = True
+    # ------------------- MAJOR CHANGE 3: Simplified update_build_config method -------------------
+    # This method was used to dynamically show/hide UI fields based on the selected model.
+    # Since the model is now a manual input, this dynamic logic is no longer reliable.
+    # We remove it to ensure all fields remain visible by default.
+    def update_build_config(self, build_config: dict, _field_value: Any, _field_name: str | None = None) -> dict:
+        # No longer need to dynamically modify the config based on model_name.
+        # Just return the original config.
         return build_config
+
+    # ---------------------------------------------------------------------------------------------
