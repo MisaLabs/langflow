@@ -70,7 +70,7 @@ export default function AppHeader(): JSX.Element {
             <img
               src="/MisaLabsLogo.png"
               alt="MisaLabs Logo"
-              className="h-5 w-5"
+              className="h-12 w-12"
             />
           )}
         </Button>
