@@ -285,3 +285,6 @@ CLAUDE.md
 member_servers.json
 # Component index cache (user-specific)
 **/.cache/lfx/
+
+# vim artifacts
+*.swp

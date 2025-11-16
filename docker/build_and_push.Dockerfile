@@ -83,6 +83,9 @@ RUN apt-get update \
 
 COPY --from=builder --chown=1000 /app/.venv /app/.venv
 
+# Create the langflow config directory with proper ownership
+RUN mkdir -p /app/langflow && chown -R 1000:0 /app/langflow
+
 # Place executables in the environment at the front of the path
 ENV PATH="/app/.venv/bin:$PATH"
 
