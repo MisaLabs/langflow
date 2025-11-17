@@ -280,3 +280,6 @@ src/frontend/temp
 *.mcp.json
 
 member_servers.json
+
+# vim artifacts
+*.swp

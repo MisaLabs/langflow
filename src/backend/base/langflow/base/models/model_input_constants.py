@@ -79,7 +79,9 @@ def add_info(component_input, info_str: str):
 
 
 def add_combobox_true(component_input):
-    component_input.combobox = True
+    # Only set combobox if the input type supports it
+    if hasattr(component_input, "combobox"):
+        component_input.combobox = True
     return component_input
 
 

@@ -201,6 +201,8 @@ export const lazyIconsMapping = {
     })),
   Milvus: () =>
     import("@/icons/Milvus").then((mod) => ({ default: mod.MilvusIcon })),
+  MisaLabs: () =>
+    import("@/icons/MisaLabs").then((mod) => ({ default: mod.MisaLabsIcon })),
   Mistral: () =>
     import("@/icons/mistral").then((mod) => ({ default: mod.MistralIcon })),
   MongoDB: () =>

@@ -64,6 +64,7 @@ import { Mem0 } from "@/icons/Mem0";
 import { MetaIcon } from "@/icons/Meta";
 import { MidjourneyIcon } from "@/icons/Midjorney";
 import { MilvusIcon } from "@/icons/Milvus";
+import { MisaLabsIcon } from "@/icons/MisaLabs";
 import { MongoDBIcon } from "@/icons/MongoDB";
 import { MistralIcon } from "@/icons/mistral";
 import { NeedleIcon } from "@/icons/Needle";
