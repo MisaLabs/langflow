@@ -29,6 +29,34 @@
 - **Observability** with LangSmith, LangFuse and other integrations.
 - **Enterprise-ready** security and scalability.
 
+##  MisaLabs QuickStart
+
+### Development mode
+
+Detail instructions can be found in [DEVELOPMENT.md](./DEVELOPMENT.md) 
+Main branch for MisaLabs Langflow implementation is in [misalabs/main](https://github.com/MisaLabs/langflow/tree/misalabs/main)
+After setting up the environment and installing prerequisites:
+
+```bash
+cd langflow
+make init
+make run_cli
+```
+
+This launches the Langflow webapp. It can be accessed by the browser through port 7860. New MisaLab components should be added
+to folder src/backend/base/langflow/components/misalabs. 
+
+### Docker mode
+
+Detailed instructions can be found in [Docker deployment guide](https://docs.langflow.org/deployment-docker).
+The latest base docker image is pushed to Misalabs docker repository. It does not contain any flow project. 
+
+```bash
+sudo docker login misalabs.jfrog.io
+cd langflow/docker_example
+sudo docker compose up
+```
+
 ## ⚡️ Quickstart
 
 Langflow requires [Python 3.10 to 3.13](https://www.python.org/downloads/release/python-3100/) and [uv](https://docs.astral.sh/uv/getting-started/installation/).
